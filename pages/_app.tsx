@@ -6,6 +6,7 @@ import { QueryClient } from 'react-query/';
 import { QueryClientProvider } from 'react-query';
 import { store } from '@/store/store';
 import { Provider } from 'react-redux';
+import { SessionProvider } from "next-auth/react";
 
 const queryClient = new QueryClient();
 
@@ -17,12 +18,14 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function App({ Component, pageProps }: AppPropsWithLayout) {
+export default function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
-    return (
-    <Provider store={store} >
-    <QueryClientProvider client={queryClient}>
-      {getLayout(<Component {...pageProps} />)}
-    </QueryClientProvider>
-    </Provider>)
+  return (
+    <SessionProvider session={session}>
+      <Provider store={store} >
+        <QueryClientProvider client={queryClient}>
+          {getLayout(<Component {...pageProps} />)}
+        </QueryClientProvider>
+      </Provider>
+    </SessionProvider>)
 }

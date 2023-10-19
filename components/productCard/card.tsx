@@ -21,10 +21,7 @@ const Card = ({ product }: cardProps) => {
   const addToCart = (e: React.MouseEvent, singleproduct: any) => {
     e.stopPropagation();
     (singleproduct instanceof Object) ? dispatch(AddToCart({...singleproduct , quantity}))  : console.log('error');    
-  }
-
-  console.log(Cart);
-  
+  }  
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 m-4 text-center ">
