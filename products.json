@@ -1,0 +1,131 @@
+{ 
+  "events":[
+    {
+      "id": 1,
+      "category": "Music",
+      "date": "2023-09-20",
+      "eventName": "Concert in the Park",
+      "description": "Enjoy an evening of live music in the park. Bring your friends and family for a night of fun and entertainment."
+    },
+    {
+      "id": 2,
+      "category": "Sports",
+      "date": "2023-10-05",
+      "eventName": "Football Championship",
+      "description": "Witness the most anticipated football championship match of the season. Get ready for some intense action!"
+    },
+    {
+      "id": 3,
+      "category": "Conference",
+      "date": "2023-11-15",
+      "eventName": "Tech Conference 2023",
+      "description": "Join industry experts and innovators at the Tech Conference 2023. Explore the latest trends in technology and networking opportunities."
+    },
+    {
+      "id": 4,
+      "category": "Art",
+      "date": "2023-12-03",
+      "eventName": "Art Exhibition",
+      "description": "Experience the world of art at our annual art exhibition. View stunning artworks from talented artists."
+    },
+    {
+      "id": 5,
+      "category": "Food",
+      "date": "2023-12-22",
+      "eventName": "Food Festival",
+      "description": "Satisfy your taste buds at the Food Festival. Sample a variety of delicious dishes from local chefs and restaurants."
+    }
+  ]
+,  
+  "dashboard":{
+    "name" : "Selva" ,
+    "posts" : 150 ,
+    "likes" : 2000 ,
+    "followers" : 50 ,
+    "following" : 400
+  },
+    "news" : [
+      {
+        "id": 1,
+        "category": "Technology",
+        "heading": "New Smartphone Model Released",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla eu risus lacinia iaculis."
+      },
+      {
+        "id": 2,
+        "category": "Sports",
+        "heading": "World Cup Final: Exciting Match Ends in a Draw",
+        "content": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+      },
+      {
+        "id": 3,
+        "category": "Entertainment",
+        "heading": "Popular Actor to Star in Upcoming Movie",
+        "content": "Vestibulum a lectus non dolor pellentesque auctor. Sed efficitur, justo ac rhoncus iaculis, nisl odio scelerisque odio."
+      },
+      {
+        "id": 4,
+        "category": "Science",
+        "heading": "New Discoveries in Space Exploration",
+        "content": "Fusce gravida, erat non posuere sollicitudin, ligula ex fringilla tortor, non feugiat lorem quam nec purus."
+      },
+      {
+        "id": 5,
+        "category": "Health",
+        "heading": "Breakthrough in Cancer Treatment",
+        "content": "Curabitur sit amet tincidunt lectus, sit amet dictum velit. Sed ut velit vel arcu suscipit laoreet."
+      },
+      {
+        "id": 6,
+        "category": "Sports",
+        "heading": "World Cup Final: Exciting Match Ends in a Draw",
+        "content": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+      },
+      {
+        "id": 7,
+        "category": "Science",
+        "heading": "New Discoveries in Space Exploration",
+        "content": "Fusce gravida, erat non posuere sollicitudin, ligula ex fringilla tortor, non feugiat lorem quam nec purus."
+      },
+      {
+        "id": 8,
+        "category": "Entertainment",
+        "heading": "Popular Actor to Star in Upcoming Movie",
+        "content": "Vestibulum a lectus non dolor pellentesque auctor. Sed efficitur, justo ac rhoncus iaculis, nisl odio scelerisque odio."
+      }
+    ]
+     ,
+    "products": [
+      {
+        "id": 1,
+        "image": "https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Beverage_Cup_Pepsi.jpg",
+        "name": "Product One",
+        "price" : 250
+      },
+      {
+        "id": 2,
+        "image": "https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Beverage_Cup_Coke.jpg",
+        "name": "Product Two",
+        "price" : 0
+      },
+      {
+        "id": 3,
+        "image": "https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Aluminum_Can_Diet_Coke.jpg",
+        "name": "Product Three",
+        "price" : 750
+      },
+      {
+        "id": 4,
+        "image": "https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Bottle_Poland_Spring.jpg",
+        "name": "Product Four",
+        "price" : 500
+      },
+      {
+        "id": 5,
+        "image": "https://greendroprecycling.com/wp-content/uploads/2017/04/GreenDrop_Station_Lemonade.jpg",
+        "name": "Product Five",
+        "price" : 300
+      }
+    ]
+  }
+  
