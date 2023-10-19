@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import GoogleProviderConfig from '../../../public/GoogleProviderConfig'
 
 export default NextAuth({
   providers: [
@@ -9,8 +10,8 @@ export default NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_SECRET,
+      clientId: GoogleProviderConfig.web.client_id,
+      clientSecret: GoogleProviderConfig.web.client_secret,
     })
     // You can add more authentication providers here if needed
   ],
