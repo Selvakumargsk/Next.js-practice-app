@@ -6,13 +6,15 @@ const PHOTOS_PER_PAGE = 20;
 
 function Gallery() {
   const [currentPage, setCurrentPage] = useState(1);
-  const { data, isLoading } = usePhotogallery(`https://jsonplaceholder.typicode.com/photos`  , {
+  const { data, isLoading , refetch } = usePhotogallery(`https://jsonplaceholder.typicode.com/photos`  , {
     PHOTOS_PER_PAGE ,
     currentPage
   });
 
-  console.log(isLoading);
-  
+const handlePageChange = async(page:number) =>{
+  setCurrentPage(page);
+  await refetch();
+}  
 
   if (isLoading) {
     return <>Loading...</>;
@@ -28,20 +30,20 @@ function Gallery() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center items-center mt-4">
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded-full mx-1"
-          onClick={() => setCurrentPage(currentPage - 1)}
+          onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
           Previous
         </button>
-        <p className='bg-red-700 text-white rounded px-2'>
+        <p className='bg-red-700 mt-[10px] text-white rounded px-2'>
         {currentPage}
         </p>
         <button
           className="bg-blue-500 text-white px-4 py-2 rounded-full mx-1 pointer"
-          onClick={() => setCurrentPage(currentPage + 1)}
+          onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === 30}
         >
           Next

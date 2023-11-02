@@ -7,8 +7,15 @@ import { RootState } from "@/store/store";
 const ProductList: React.FC = ({ products }: any) => {
   const router = useRouter();
   const Cart = useSelector((state: RootState) => state.cart.value);
-  
-  console.log(products , 'jvcdcv' , Cart);
+
+  if (!products || products.length === 0) {
+    return (
+      <div className="text-center">
+        <h1>No products available</h1>
+        <button onClick={() => router.reload()}>Refresh</button>
+      </div>
+    );
+  }
   return (
     <>
       <h1 className="text-center">productList page</h1>
@@ -31,15 +38,25 @@ const ProductList: React.FC = ({ products }: any) => {
 
 export default ProductList;
 
-export async function getStaticProps(){
+export async function getStaticProps() {
+  try {
     const response = await fetch('http://localhost:4000/products/');
-    const data = await response.json();    
+    const data = await response.json();
 
-    return{
-        props : {
-            products: data
-        } ,
-        revalidate : 10
-    }
-
+    return {
+      props: {
+        products: data
+      },
+      revalidate: 10
+    };
+  } catch (error) {
+    // Handle the error or return an empty products array
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        products: []
+      },
+      revalidate: 10
+    };
+  }
 }

@@ -1,5 +1,4 @@
 export default {
-    next_auth_secret: "lftwOsmj0xXXJW+JmqoCTvplBjxoxGXqKrRvKLCB10c=",
     "web": {
         client_id: "305028865721-es3icbir4ugp7o9ao3i86asfp0isg0cm.apps.googleusercontent.com",
         project_id: "next-js-project-402511",
