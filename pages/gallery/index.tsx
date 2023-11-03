@@ -12,7 +12,7 @@ function Gallery() {
   });
 
 const handlePageChange = async(page:number) =>{
-  setCurrentPage(page);
+  await setCurrentPage(page);
   await refetch();
 }  
 
