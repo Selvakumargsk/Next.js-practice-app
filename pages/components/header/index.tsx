@@ -49,7 +49,7 @@ export default function Header() {
             </Link>
             <Link className='text-decoration-none' href="/Cart">
               <div className="relative inline-block align-middle">
-                <img width="30" height="30" src="https://img.icons8.com/material-rounded/24/shopping-cart.png" alt="shopping-cart" />
+                <Image width="30" height="30" src="https://img.icons8.com/material-rounded/24/shopping-cart.png" alt="shopping-cart" />
                 <span className="text-white absolute right-0 px-1 rounded-full bg-red-500" style={{ top: "-10px" }}>
                   {Cart?.length}
                 </span>
@@ -63,7 +63,7 @@ export default function Header() {
             </Link>}
             {sessiondata && (
               <div onClick={() => { setShow(!show); }}>
-                <img
+                <Image
                   width={30}
                   height={30}
                   alt={sessiondata?.user.name}

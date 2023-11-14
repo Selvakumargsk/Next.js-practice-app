@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getLayout } from '../components/layout';
 import { usePhotogallery } from '@/hooks/usePhotoGalleryQuery';
+import Image from 'next/image';
 
 const PHOTOS_PER_PAGE = 20;
 
@@ -25,7 +26,7 @@ const handlePageChange = async(page:number) =>{
       <div className="grid grid-cols-4 gap-4">
         {Array.isArray(data?.data) && data?.data.map((photo:any) => (
           <div key={photo.id}>
-            <img src={photo.url} alt={photo.title} />
+            <Image src={photo.url} alt={photo.title} />
             <p>{photo.id}</p>
           </div>
         ))}

@@ -18,7 +18,7 @@ const Events: React.FC = ({ eventList }: any) => {
       fetchEvents();
     } 
     router.push(`/events?category=${filter}` , undefined , {shallow:true});
-  }, [filter]); 
+  }, [filter ,router]); 
 
   return (
     <>

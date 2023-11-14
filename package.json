@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"next dev\" \"json-server --watch products.json --port 4000\"",
-    "build": "next build",
+    "build": "concurrently \"next build\" \"json-server --watch products.json --port 4000\"",
     "start": "next start",
     "lint": "next lint"
   },
