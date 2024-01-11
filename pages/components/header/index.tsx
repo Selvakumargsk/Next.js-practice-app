@@ -13,6 +13,8 @@ export default function Header() {
   useEffect(() => {
     const securePage = async () => {
       const session: any = await getSession() ?? false;
+      console.log(session);
+      
       setData(session);
     }
     securePage();
@@ -63,7 +65,7 @@ export default function Header() {
             </Link>}
             {sessiondata && (
               <div onClick={() => { setShow(!show); }}>
-                <Image
+                <img
                   width={30}
                   height={30}
                   alt={sessiondata?.user.name}

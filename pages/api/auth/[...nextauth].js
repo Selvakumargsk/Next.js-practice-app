@@ -13,21 +13,20 @@ export default NextAuth({
       clientId: GoogleProviderConfig.web.client_id,
       clientSecret: GoogleProviderConfig.web.client_secret,
     })
-    // You can add more authentication providers here if needed
+    
   ],
   callbacks: {
     async jwt({ token, account }) {
-      // Persist the OAuth access_token to the token right after signin
+      
       if (account) {
         token.accessToken = account.access_token
       }
       return token
     },
     async session({ session, token, user }) {
-      // Send properties to the client, like an access_token from a provider.
       session.accessToken = token.accessToken
       return session
     }
   }
-  // Add any other configuration options you require
+ 
 });

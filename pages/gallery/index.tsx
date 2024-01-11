@@ -26,7 +26,7 @@ const handlePageChange = async(page:number) =>{
       <div className="grid grid-cols-4 gap-4">
         {Array.isArray(data?.data) && data?.data.map((photo:any) => (
           <div key={photo.id}>
-            <Image src={photo.url} alt={photo.title} />
+            <img src={photo.url} alt={photo.title} />
             <p>{photo.id}</p>
           </div>
         ))}
